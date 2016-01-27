@@ -1,23 +1,45 @@
-﻿@model Madera.Models.HomeModel
+﻿@model IEnumerable<EntityF.ACCOUNT>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Example</h2>
-@using (Html.BeginForm())
-{
-    <div>
-        <label>Nom :</label>
-        @Html.TextBoxFor(m => m.Nom)
-    </div>
-    <div>
-        <label>Prénom :</label>
-        @Html.TextBoxFor(m => m.Prenom)
-    </div>
-    <div>
-        <label>Age :</label>
-        @Html.TextBoxFor(m => m.Age)
-    </div>
-    <input type="submit" value="Test Form" />
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMBER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IBAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUSTOMER.LASTNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMBER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IBAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER.LASTNAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ACCOUNT_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ACCOUNT_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ACCOUNT_ID })
+        </td>
+    </tr>
 }
+
+</table>

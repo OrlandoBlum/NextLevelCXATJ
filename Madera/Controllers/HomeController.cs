@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Madera.Models;
+using EntityF;
 
 namespace Madera.Controllers
 {
@@ -17,8 +18,14 @@ namespace Madera.Controllers
 
         public ActionResult Index(HomeModel MonHome)
         {
-            MonHome.Nom = "test lolilol";
-            return View(MonHome);
+            
+            return View(AccountManager.GetAllAccounts());
+        }
+        //Client view
+        public ActionResult Client()
+        {
+
+            return View(CustomerManager.GetAllCustomers());
         }
 
         // GET: Home/Details/5

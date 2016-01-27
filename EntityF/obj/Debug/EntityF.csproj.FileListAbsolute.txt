@@ -18,3 +18,12 @@ C:\Users\eithi\OneDrive\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\
 C:\Users\eithi\OneDrive\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.csprojResolveAssemblyReference.cache
 C:\Users\eithi\OneDrive\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.dll
 C:\Users\eithi\OneDrive\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.pdb
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.dll.config
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.dll
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.pdb
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.dll
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.xml
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.dll
+D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.pdb

@@ -8,17 +8,17 @@ namespace EntityF
 {
     public class AccountManager
     {
-        public List<ACCOUNT> GetAllAccounts()
+        public static List<ACCOUNT> GetAllAccounts()
         {
-            MaderaEntities MonEntitéMadera = new MaderaEntities();
-            return MonEntitéMadera.ACCOUNT.ToList();
+            MaderaEntities MaderaEntities = new MaderaEntities();
+            return MaderaEntities.ACCOUNT.ToList();
         }
 
         public ACCOUNT GetAccountById(int id)
         {
-            MaderaEntities MonEntitéMadera = new MaderaEntities();
+            MaderaEntities MaderaEntities = new MaderaEntities();
             
-            foreach(var a in MonEntitéMadera.ACCOUNT)
+            foreach(var a in MaderaEntities.ACCOUNT)
             {
                 if(a.ACCOUNT_ID == id)
                 {
@@ -31,24 +31,24 @@ namespace EntityF
 
         public void Delete(int id)
         {
-            MaderaEntities MonEntitéMadera = new MaderaEntities();
+            MaderaEntities MaderaEntities = new MaderaEntities();
 
-            foreach (var a in MonEntitéMadera.ACCOUNT)
+            foreach (var a in MaderaEntities.ACCOUNT)
             {
                 if (a.ACCOUNT_ID == id)
                 {
-                    MonEntitéMadera.ACCOUNT.Remove(a);
-                    MonEntitéMadera.SaveChanges();
+                    MaderaEntities.ACCOUNT.Remove(a);
+                    MaderaEntities.SaveChanges();
                 }
             }
         }
 
         public void SetAccount(ACCOUNT AccountUp)
         {
-            MaderaEntities MonEntitéMadera = new MaderaEntities();
+            MaderaEntities MaderaEntities = new MaderaEntities();
 
-            MonEntitéMadera.ACCOUNT.Add(AccountUp);
-            MonEntitéMadera.SaveChanges();
+            MaderaEntities.ACCOUNT.Add(AccountUp);
+            MaderaEntities.SaveChanges();
         }
     }
 }

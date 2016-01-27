@@ -76,6 +76,7 @@
     <Compile Include="CUSTOMER.cs">
       <DependentUpon>MaderaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomerManager.cs" />
     <Compile Include="FILL.cs">
       <DependentUpon>MaderaDB.tt</DependentUpon>
     </Compile>

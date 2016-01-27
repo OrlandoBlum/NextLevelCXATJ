@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EntityF.CUSTOMER>
+
+@{
+    ViewBag.Title = "Client";
+}
+
+<h2>Client</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CLIENT_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOBILE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIRET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIVILITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCOUNT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTERPRISE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLIENT_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LASTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIRSTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOBILE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIRET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIVILITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCOUNT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTERPRISE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
