@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MaderaModelStoreContainer" CdmEntityContainer="MaderaEntities">
+    <EntitySetMapping Name="ACCOUNT">
+      <EntityTypeMapping TypeName="MaderaModel.ACCOUNT">
+        <MappingFragment StoreEntitySet="ACCOUNT">
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADRESS">
+      <EntityTypeMapping TypeName="MaderaModel.ADRESS">
+        <MappingFragment StoreEntitySet="ADRESS">
+          <ScalarProperty Name="ADRESS_ID" ColumnName="ADRESS_ID" />
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="LINE1" ColumnName="LINE1" />
+          <ScalarProperty Name="LINE2" ColumnName="LINE2" />
+          <ScalarProperty Name="LINE3" ColumnName="LINE3" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPONENTFAMILY">
+      <EntityTypeMapping TypeName="MaderaModel.COMPONENTFAMILY">
+        <MappingFragment StoreEntitySet="COMPONENTFAMILY">
+          <ScalarProperty Name="FAMILY_ID" ColumnName="FAMILY_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPONENTS">
+      <EntityTypeMapping TypeName="MaderaModel.COMPONENTS">
+        <MappingFragment StoreEntitySet="COMPONENTS">
+          <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
+          <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+          <ScalarProperty Name="FAMILY_ID" ColumnName="FAMILY_ID" />
+          <ScalarProperty Name="STOCK_ID" ColumnName="STOCK_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPOSED_TO">
+      <EntityTypeMapping TypeName="MaderaModel.COMPOSED_TO">
+        <MappingFragment StoreEntitySet="COMPOSED_TO">
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COVER">
+      <EntityTypeMapping TypeName="MaderaModel.COVER">
+        <MappingFragment StoreEntitySet="COVER">
+          <ScalarProperty Name="COVER_ID" ColumnName="COVER_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURRENCY">
+      <EntityTypeMapping TypeName="MaderaModel.CURRENCY">
+        <MappingFragment StoreEntitySet="CURRENCY">
+          <ScalarProperty Name="CURRENCY_ID" ColumnName="CURRENCY_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER">
+      <EntityTypeMapping TypeName="MaderaModel.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="ADRESS" ColumnName="ADRESS" />
+          <ScalarProperty Name="SIRET" ColumnName="SIRET" />
+          <ScalarProperty Name="CIVILITY" ColumnName="CIVILITY" />
+          <ScalarProperty Name="ACCOUNT" ColumnName="ACCOUNT" />
+          <ScalarProperty Name="ENTERPRISE" ColumnName="ENTERPRISE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FILL">
+      <EntityTypeMapping TypeName="MaderaModel.FILL">
+        <MappingFragment StoreEntitySet="FILL">
+          <ScalarProperty Name="FILL_ID" ColumnName="FILL_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FINISHING">
+      <EntityTypeMapping TypeName="MaderaModel.FINISHING">
+        <MappingFragment StoreEntitySet="FINISHING">
+          <ScalarProperty Name="FINISHING_ID" ColumnName="FINISHING_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODELE">
+      <EntityTypeMapping TypeName="MaderaModel.MODELE">
+        <MappingFragment StoreEntitySet="MODELE">
+          <ScalarProperty Name="MODELE_ID" ColumnName="MODELE_ID" />
+          <ScalarProperty Name="RANGE_ID" ColumnName="RANGE_ID" />
+          <ScalarProperty Name="STANDARD" ColumnName="STANDARD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULE">
+      <EntityTypeMapping TypeName="MaderaModel.MODULE">
+        <MappingFragment StoreEntitySet="MODULE">
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="RANGE_ID" ColumnName="RANGE_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER">
+      <EntityTypeMapping TypeName="MaderaModel.ORDER">
+        <MappingFragment StoreEntitySet="ORDER">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
+          <ScalarProperty Name="CURRENCY_ID" ColumnName="CURRENCY_ID" />
+          <ScalarProperty Name="STATUS_ID" ColumnName="STATUS_ID" />
+          <ScalarProperty Name="TOTALAMOUNT" ColumnName="TOTALAMOUNT" />
+          <ScalarProperty Name="TOTALQUANTITY" ColumnName="TOTALQUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERDETAILS">
+      <EntityTypeMapping TypeName="MaderaModel.ORDERDETAILS">
+        <MappingFragment StoreEntitySet="ORDERDETAILS">
+          <ScalarProperty Name="ODERDETAILS_ID" ColumnName="ODERDETAILS_ID" />
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="MODELE" ColumnName="MODELE" />
+          <ScalarProperty Name="TOTALAMOUNT" ColumnName="TOTALAMOUNT" />
+          <ScalarProperty Name="SHIPPINGDATE" ColumnName="SHIPPINGDATE" />
+          <ScalarProperty Name="SHIPPINGADRESS" ColumnName="SHIPPINGADRESS" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERSTATUS">
+      <EntityTypeMapping TypeName="MaderaModel.ORDERSTATUS">
+        <MappingFragment StoreEntitySet="ORDERSTATUS">
+          <ScalarProperty Name="STATUS_ID" ColumnName="STATUS_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSSESSES">
+      <EntityTypeMapping TypeName="MaderaModel.POSSESSES">
+        <MappingFragment StoreEntitySet="POSSESSES">
+          <ScalarProperty Name="RANGE_ID" ColumnName="RANGE_ID" />
+          <ScalarProperty Name="COVER_ID" ColumnName="COVER_ID" />
+          <ScalarProperty Name="FINISHING_ID" ColumnName="FINISHING_ID" />
+          <ScalarProperty Name="FILL_ID" ColumnName="FILL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECT">
+      <EntityTypeMapping TypeName="MaderaModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECT">
+          <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="REFERENCE" ColumnName="REFERENCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANGE">
+      <EntityTypeMapping TypeName="MaderaModel.RANGE">
+        <MappingFragment StoreEntitySet="RANGE">
+          <ScalarProperty Name="RANGE_ID" ColumnName="RANGE_ID" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STOCK">
+      <EntityTypeMapping TypeName="MaderaModel.STOCK">
+        <MappingFragment StoreEntitySet="STOCK">
+          <ScalarProperty Name="STOCK_ID" ColumnName="STOCK_ID" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MaderaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIT">
+      <EntityTypeMapping TypeName="MaderaModel.UNIT">
+        <MappingFragment StoreEntitySet="UNIT">
+          <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="MaderaModel.USERS">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

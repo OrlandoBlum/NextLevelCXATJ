@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MaderaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="ACCOUNT_ID" />
+    </Key>
+    <Property Name="ACCOUNT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NUMBER" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IBAN" Type="varchar" MaxLength="34" />
+  </EntityType>
+  <EntityType Name="ADRESS">
+    <Key>
+      <PropertyRef Name="ADRESS_ID" />
+    </Key>
+    <Property Name="ADRESS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LINE1" Type="varchar" MaxLength="200" />
+    <Property Name="LINE2" Type="varchar" MaxLength="200" />
+    <Property Name="LINE3" Type="varchar" MaxLength="200" />
+    <Property Name="POSTALCODE" Type="varchar" MaxLength="10" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="COUNTRY" Type="int" />
+    <Property Name="TYPE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPONENTFAMILY">
+    <Key>
+      <PropertyRef Name="FAMILY_ID" />
+    </Key>
+    <Property Name="FAMILY_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPONENTS">
+    <Key>
+      <PropertyRef Name="COMPONENT_ID" />
+    </Key>
+    <Property Name="COMPONENT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UNIT_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FAMILY_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="STOCK_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="UNIT" Type="int" />
+    <Property Name="LENGTH" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="WIDTH" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="COST" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="COMPOSED_TO">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+      <PropertyRef Name="COMPONENT_ID" />
+    </Key>
+    <Property Name="MODULE_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="COMPONENT_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="QUANTITY" Type="int" />
+  </EntityType>
+  <EntityType Name="COVER">
+    <Key>
+      <PropertyRef Name="COVER_ID" />
+    </Key>
+    <Property Name="COVER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="LABEL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CURRENCY">
+    <Key>
+      <PropertyRef Name="CURRENCY_ID" />
+    </Key>
+    <Property Name="CURRENCY_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="LABEL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CLIENT_ID" />
+    </Key>
+    <Property Name="CLIENT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LASTNAME" Type="varchar" MaxLength="100" />
+    <Property Name="FIRSTNAME" Type="varchar" MaxLength="100" />
+    <Property Name="PHONE" Type="int" />
+    <Property Name="MOBILE" Type="int" />
+    <Property Name="FAX" Type="int" />
+    <Property Name="MAIL" Type="varchar" MaxLength="100" />
+    <Property Name="ADRESS" Type="int" />
+    <Property Name="SIRET" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CIVILITY" Type="varchar" MaxLength="3" />
+    <Property Name="ACCOUNT" Type="int" />
+    <Property Name="ENTERPRISE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FILL">
+    <Key>
+      <PropertyRef Name="FILL_ID" />
+    </Key>
+    <Property Name="FILL_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="LABEL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FINISHING">
+    <Key>
+      <PropertyRef Name="FINISHING_ID" />
+    </Key>
+    <Property Name="FINISHING_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="LABEL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MODELE">
+    <Key>
+      <PropertyRef Name="MODELE_ID" />
+    </Key>
+    <Property Name="MODELE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RANGE_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="STANDARD" Type="bit" />
+  </EntityType>
+  <EntityType Name="MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RANGE_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PROJECT_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CURRENCY_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="STATUS_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TOTALAMOUNT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TOTALQUANTITY" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDERDETAILS">
+    <Key>
+      <PropertyRef Name="ODERDETAILS_ID" />
+    </Key>
+    <Property Name="ODERDETAILS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDER_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MODELE" Type="int" />
+    <Property Name="TOTALAMOUNT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SHIPPINGDATE" Type="datetime" />
+    <Property Name="SHIPPINGADRESS" Type="int" />
+    <Property Name="QUANTITY" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDERSTATUS">
+    <Key>
+      <PropertyRef Name="STATUS_ID" />
+    </Key>
+    <Property Name="STATUS_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+    <Property Name="LABEL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="POSSESSES">
+    <Key>
+      <PropertyRef Name="RANGE_ID" />
+      <PropertyRef Name="COVER_ID" />
+      <PropertyRef Name="FINISHING_ID" />
+      <PropertyRef Name="FILL_ID" />
+    </Key>
+    <Property Name="RANGE_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="COVER_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FINISHING_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FILL_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="PROJECT_ID" />
+    </Key>
+    <Property Name="PROJECT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDER_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="REFERENCE" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RANGE">
+    <Key>
+      <PropertyRef Name="RANGE_ID" />
+    </Key>
+    <Property Name="RANGE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LABEL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="STOCK">
+    <Key>
+      <PropertyRef Name="STOCK_ID" />
+    </Key>
+    <Property Name="STOCK_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITEM" Type="int" />
+    <Property Name="TYPE" Type="varchar" MaxLength="100" />
+    <Property Name="VALUE" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UNIT">
+    <Key>
+      <PropertyRef Name="UNIT_ID" />
+    </Key>
+    <Property Name="UNIT_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="100" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="1024" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="256" />
+    <Property Name="FIRSTNAME" Type="varchar" MaxLength="100" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_ACCOUNT_POSSESSES_CUSTOMER">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Principal>
+      <Dependent Role="ACCOUNT">
+        <PropertyRef Name="CLIENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADRESS_GET_CUSTOMER">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="ADRESS" Type="Self.ADRESS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Principal>
+      <Dependent Role="ADRESS">
+        <PropertyRef Name="CLIENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPONEN_BELONGS_T_COMPONEN">
+    <End Role="COMPONENTFAMILY" Type="Self.COMPONENTFAMILY" Multiplicity="1" />
+    <End Role="COMPONENTS" Type="Self.COMPONENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTFAMILY">
+        <PropertyRef Name="FAMILY_ID" />
+      </Principal>
+      <Dependent Role="COMPONENTS">
+        <PropertyRef Name="FAMILY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPONEN_BELONGS_T_STOCK">
+    <End Role="STOCK" Type="Self.STOCK" Multiplicity="1" />
+    <End Role="COMPONENTS" Type="Self.COMPONENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STOCK">
+        <PropertyRef Name="STOCK_ID" />
+      </Principal>
+      <Dependent Role="COMPONENTS">
+        <PropertyRef Name="STOCK_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPONEN_GET2_UNIT">
+    <End Role="UNIT" Type="Self.UNIT" Multiplicity="1" />
+    <End Role="COMPONENTS" Type="Self.COMPONENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT_ID" />
+      </Principal>
+      <Dependent Role="COMPONENTS">
+        <PropertyRef Name="UNIT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPOSED_COMPOSED__COMPONEN">
+    <End Role="COMPONENTS" Type="Self.COMPONENTS" Multiplicity="1" />
+    <End Role="COMPOSED_TO" Type="Self.COMPOSED_TO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTS">
+        <PropertyRef Name="COMPONENT_ID" />
+      </Principal>
+      <Dependent Role="COMPOSED_TO">
+        <PropertyRef Name="COMPONENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPOSED_COMPOSED__MODULE">
+    <End Role="MODULE" Type="Self.MODULE" Multiplicity="1" />
+    <End Role="COMPOSED_TO" Type="Self.COMPOSED_TO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODULE">
+        <PropertyRef Name="MODULE_ID" />
+      </Principal>
+      <Dependent Role="COMPOSED_TO">
+        <PropertyRef Name="MODULE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MODELE_BELONGS_T_RANGE">
+    <End Role="RANGE" Type="Self.RANGE" Multiplicity="0..1" />
+    <End Role="MODELE" Type="Self.MODELE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANGE">
+        <PropertyRef Name="RANGE_ID" />
+      </Principal>
+      <Dependent Role="MODELE">
+        <PropertyRef Name="RANGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MODULE_POSSESSES_RANGE">
+    <End Role="RANGE" Type="Self.RANGE" Multiplicity="1" />
+    <End Role="MODULE" Type="Self.MODULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANGE">
+        <PropertyRef Name="RANGE_ID" />
+      </Principal>
+      <Dependent Role="MODULE">
+        <PropertyRef Name="RANGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_DO_CUSTOMER">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_GET4_PROJECT">
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="0..1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT">
+        <PropertyRef Name="PROJECT_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="PROJECT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_GET5_CURRENCY">
+    <End Role="CURRENCY" Type="Self.CURRENCY" Multiplicity="1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURRENCY">
+        <PropertyRef Name="CURRENCY_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="CURRENCY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_POSSESSES_ORDERSTA">
+    <End Role="ORDERSTATUS" Type="Self.ORDERSTATUS" Multiplicity="1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDERSTATUS">
+        <PropertyRef Name="STATUS_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="STATUS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDERDET_CONTAIN_ORDER">
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="1" />
+    <End Role="ORDERDETAILS" Type="Self.ORDERDETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="ORDERDETAILS">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POSSESSE_POSSESSES_COVER">
+    <End Role="COVER" Type="Self.COVER" Multiplicity="1" />
+    <End Role="POSSESSES" Type="Self.POSSESSES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COVER">
+        <PropertyRef Name="COVER_ID" />
+      </Principal>
+      <Dependent Role="POSSESSES">
+        <PropertyRef Name="COVER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POSSESSE_POSSESSES_FILL">
+    <End Role="FILL" Type="Self.FILL" Multiplicity="1" />
+    <End Role="POSSESSES" Type="Self.POSSESSES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILL">
+        <PropertyRef Name="FILL_ID" />
+      </Principal>
+      <Dependent Role="POSSESSES">
+        <PropertyRef Name="FILL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POSSESSE_POSSESSES_FINISHIN">
+    <End Role="FINISHING" Type="Self.FINISHING" Multiplicity="1" />
+    <End Role="POSSESSES" Type="Self.POSSESSES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FINISHING">
+        <PropertyRef Name="FINISHING_ID" />
+      </Principal>
+      <Dependent Role="POSSESSES">
+        <PropertyRef Name="FINISHING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POSSESSE_POSSESSES_RANGE">
+    <End Role="RANGE" Type="Self.RANGE" Multiplicity="1" />
+    <End Role="POSSESSES" Type="Self.POSSESSES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANGE">
+        <PropertyRef Name="RANGE_ID" />
+      </Principal>
+      <Dependent Role="POSSESSES">
+        <PropertyRef Name="RANGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROJECT_GET3_ORDER">
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="1" />
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="PROJECT">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MaderaModelStoreContainer">
+    <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADRESS" EntityType="Self.ADRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPONENTFAMILY" EntityType="Self.COMPONENTFAMILY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPONENTS" EntityType="Self.COMPONENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPOSED_TO" EntityType="Self.COMPOSED_TO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COVER" EntityType="Self.COVER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCY" EntityType="Self.CURRENCY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FILL" EntityType="Self.FILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FINISHING" EntityType="Self.FINISHING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODELE" EntityType="Self.MODELE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULE" EntityType="Self.MODULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER" EntityType="Self.ORDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERDETAILS" EntityType="Self.ORDERDETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERSTATUS" EntityType="Self.ORDERSTATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POSSESSES" EntityType="Self.POSSESSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROJECT" EntityType="Self.PROJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RANGE" EntityType="Self.RANGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STOCK" EntityType="Self.STOCK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UNIT" EntityType="Self.UNIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ACCOUNT_POSSESSES_CUSTOMER" Association="Self.FK_ACCOUNT_POSSESSES_CUSTOMER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADRESS_GET_CUSTOMER" Association="Self.FK_ADRESS_GET_CUSTOMER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ADRESS" EntitySet="ADRESS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPONEN_BELONGS_T_COMPONEN" Association="Self.FK_COMPONEN_BELONGS_T_COMPONEN">
+      <End Role="COMPONENTFAMILY" EntitySet="COMPONENTFAMILY" />
+      <End Role="COMPONENTS" EntitySet="COMPONENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPONEN_BELONGS_T_STOCK" Association="Self.FK_COMPONEN_BELONGS_T_STOCK">
+      <End Role="STOCK" EntitySet="STOCK" />
+      <End Role="COMPONENTS" EntitySet="COMPONENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPONEN_GET2_UNIT" Association="Self.FK_COMPONEN_GET2_UNIT">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="COMPONENTS" EntitySet="COMPONENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPOSED_COMPOSED__COMPONEN" Association="Self.FK_COMPOSED_COMPOSED__COMPONEN">
+      <End Role="COMPONENTS" EntitySet="COMPONENTS" />
+      <End Role="COMPOSED_TO" EntitySet="COMPOSED_TO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPOSED_COMPOSED__MODULE" Association="Self.FK_COMPOSED_COMPOSED__MODULE">
+      <End Role="MODULE" EntitySet="MODULE" />
+      <End Role="COMPOSED_TO" EntitySet="COMPOSED_TO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MODELE_BELONGS_T_RANGE" Association="Self.FK_MODELE_BELONGS_T_RANGE">
+      <End Role="RANGE" EntitySet="RANGE" />
+      <End Role="MODELE" EntitySet="MODELE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MODULE_POSSESSES_RANGE" Association="Self.FK_MODULE_POSSESSES_RANGE">
+      <End Role="RANGE" EntitySet="RANGE" />
+      <End Role="MODULE" EntitySet="MODULE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_DO_CUSTOMER" Association="Self.FK_ORDER_DO_CUSTOMER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_GET4_PROJECT" Association="Self.FK_ORDER_GET4_PROJECT">
+      <End Role="PROJECT" EntitySet="PROJECT" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_GET5_CURRENCY" Association="Self.FK_ORDER_GET5_CURRENCY">
+      <End Role="CURRENCY" EntitySet="CURRENCY" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_POSSESSES_ORDERSTA" Association="Self.FK_ORDER_POSSESSES_ORDERSTA">
+      <End Role="ORDERSTATUS" EntitySet="ORDERSTATUS" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDERDET_CONTAIN_ORDER" Association="Self.FK_ORDERDET_CONTAIN_ORDER">
+      <End Role="ORDER" EntitySet="ORDER" />
+      <End Role="ORDERDETAILS" EntitySet="ORDERDETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POSSESSE_POSSESSES_COVER" Association="Self.FK_POSSESSE_POSSESSES_COVER">
+      <End Role="COVER" EntitySet="COVER" />
+      <End Role="POSSESSES" EntitySet="POSSESSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POSSESSE_POSSESSES_FILL" Association="Self.FK_POSSESSE_POSSESSES_FILL">
+      <End Role="FILL" EntitySet="FILL" />
+      <End Role="POSSESSES" EntitySet="POSSESSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POSSESSE_POSSESSES_FINISHIN" Association="Self.FK_POSSESSE_POSSESSES_FINISHIN">
+      <End Role="FINISHING" EntitySet="FINISHING" />
+      <End Role="POSSESSES" EntitySet="POSSESSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POSSESSE_POSSESSES_RANGE" Association="Self.FK_POSSESSE_POSSESSES_RANGE">
+      <End Role="RANGE" EntitySet="RANGE" />
+      <End Role="POSSESSES" EntitySet="POSSESSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROJECT_GET3_ORDER" Association="Self.FK_PROJECT_GET3_ORDER">
+      <End Role="ORDER" EntitySet="ORDER" />
+      <End Role="PROJECT" EntitySet="PROJECT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

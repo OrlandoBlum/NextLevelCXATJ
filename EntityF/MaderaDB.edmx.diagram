@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d0072b015df14eb3a25f531cc0d8f62a" Name="Diagram1" ZoomLevel="109">
+        <EntityTypeShape EntityType="MaderaModel.ACCOUNT" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.ADRESS" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.COMPONENTFAMILY" Width="1.5" PointX="10.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.COMPONENTS" Width="1.5" PointX="13" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.COMPOSED_TO" Width="1.5" PointX="15.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.COVER" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.CURRENCY" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.CUSTOMER" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.FILL" Width="1.5" PointX="13.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.FINISHING" Width="1.5" PointX="13.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.MODELE" Width="1.5" PointX="13" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.MODULE" Width="1.5" PointX="13" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.ORDER" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.ORDERDETAILS" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.ORDERSTATUS" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.POSSESSES" Width="1.5" PointX="16" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.PROJECT" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.RANGE" Width="1.5" PointX="10.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.STOCK" Width="1.5" PointX="10.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.UNIT" Width="1.5" PointX="10.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.USERS" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MaderaModel.FK_ACCOUNT_POSSESSES_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ADRESS_GET_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_COMPONEN_BELONGS_T_COMPONEN" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_COMPONEN_BELONGS_T_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_COMPONEN_GET2_UNIT" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_COMPOSED_COMPOSED__COMPONEN" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_COMPOSED_COMPOSED__MODULE" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_POSSESSE_POSSESSES_COVER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ORDER_GET5_CURRENCY" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ORDER_DO_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_POSSESSE_POSSESSES_FILL" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_POSSESSE_POSSESSES_FINISHIN" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_MODELE_BELONGS_T_RANGE" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_MODULE_POSSESSES_RANGE" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ORDER_GET4_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ORDER_POSSESSES_ORDERSTA" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_ORDERDET_CONTAIN_ORDER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_PROJECT_GET3_ORDER" ManuallyRouted="false" />
+        <AssociationConnector Association="MaderaModel.FK_POSSESSE_POSSESSES_RANGE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
