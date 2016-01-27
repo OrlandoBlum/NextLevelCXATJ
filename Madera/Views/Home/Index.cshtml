@@ -1,6 +1,23 @@
-﻿
+﻿@model Madera.Models.HomeModel
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Example</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Nom :</label>
+        @Html.TextBoxFor(m => m.Nom)
+    </div>
+    <div>
+        <label>Prénom :</label>
+        @Html.TextBoxFor(m => m.Prenom)
+    </div>
+    <div>
+        <label>Age :</label>
+        @Html.TextBoxFor(m => m.Age)
+    </div>
+    <input type="submit" value="Test Form" />
+}

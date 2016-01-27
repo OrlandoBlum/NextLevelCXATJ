@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Madera.Models;
 
 namespace Madera.Controllers
 {
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        /*public ActionResult Index()
         {
             return View();
+        }*/
+
+        public ActionResult Index(HomeModel MonHome)
+        {
+            MonHome.Nom = "test lolilol";
+            return View(MonHome);
         }
 
         // GET: Home/Details/5
