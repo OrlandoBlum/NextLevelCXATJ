@@ -34,6 +34,7 @@ namespace Madera.Controllers
         // DELETE: api/Home/5
         public void Delete(int id)
         {
+            // coucou je suis un commentaire
         }
     }
 }
