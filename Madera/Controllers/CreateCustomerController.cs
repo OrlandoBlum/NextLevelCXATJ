@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Madera.Controllers
 {
-    public class CreateCustumerController : Controller
+    public class CreateCustomerController : Controller
     {
         // GET: CreateCustumer
         public ActionResult Index()
