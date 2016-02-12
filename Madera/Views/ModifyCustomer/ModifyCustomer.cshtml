@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "ModifyCustomer";
+}
+
+<section class="row">
+    <div>
+        <div class="col-xs-2">
+            <button type="button" class="btn btn-warning btn-sm">
+                <strong>retour</strong>
+            </button>
+        </div>
+        <div class="col-xs-3">
+            <button type="button" class="btn btn-info btn-sm"><strong>Modification fiche client</strong></button>
+        </div>
+        <div class="col-xs-offset-1 col-xs-1">
+            <button type="button" class="btn btn-danger btn-sm"><strong>Supprimer</strong></button>
+        </div>
+        <div class="col-xs-offset-2 col-xs-1">
+            <button type="button" class="btn btn-success btn-sm"><strong>Valider</strong></button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="row">
+    <div>
+        <form class="well">
+            <fieldset>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Civil.</span>
+                                <select class="form-control input-sm">
+                                    <option value=""></option>
+                                    <option value="monsieur">Monsieur</option>
+                                    <option value="madame">Madame</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Nom</span>
+                                <input type="text" name="nom" id="nom" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Prenom</span>
+                                <input type="text" name="prenom" id="prenom" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Fonction</span>
+                                <input type="text" name="fonction" id="fonction" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="legend1">Client Pro</div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Raison social</span>
+                                <input type="text" name="rsocial" id="rsocial" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">N° Sirent</span>
+                                <input type="text" name="sirent" id="sirent" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">S.Activité</span>
+                                <input type="text" name="activite" id="activite" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="legend1">Adresse de facturation</div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ligne 1</span>
+                                <input type="text" name="ligne1Fac" id="ligne1Fac" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ligne 2</span>
+                                <input type="text" name="ligne2Fac" id="ligne2Fac" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">CP</span>
+                                <input type="text" name="codepostalFac" id="codepostalFac" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ville</span>
+                                <input type="text" name="villeFac" id="villeFac" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="legend1">Adresse de livraison</div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ligne 1</span>
+                                <input type="text" name="ligne1Livr" id="ligne1Livr" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ligne 2</span>
+                                <input type="text" name="ligne2Livr" id="ligne2Livr" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">CP</span>
+                                <input type="text" name="codepostalLivr" id="codepostalLivr" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ville</span>
+                                <input type="text" name="villeLivr" id="villeLivr" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="legend1">Coordonnées Client</div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">N° Portable</span>
+                                <input type="text" name="numport" id="numport" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">N° fixe</span>
+                                <input type="text" name="numfixe" id="numfixe" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">E-Mail</span>
+                                <input type="text" name="email" id="email" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Fax</span>
+                                <input type="text" name="fax" id="fax" class="form-control input-sm">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="legend1">Coordonnées 2</div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">N° Portable</span>
+                                <input type="text" name="numport" id="numport" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">N° fixe</span>
+                                <input type="text" name="numfixe" id="numfixe" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">E-Mail</span>
+                                <input type="text" name="email" id="email" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Fax</span>
+                                <input type="text" name="fax" id="fax" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="legend1">Commentaires :</div>
+                        <textarea id="commentaire" class="form-control" rows="4"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>			
+
