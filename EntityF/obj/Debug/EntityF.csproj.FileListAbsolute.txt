@@ -27,3 +27,13 @@ D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework
 D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.dll
 D:\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.pdb
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.dll.config
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.dll
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityF.pdb
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.dll
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.xml
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.csprojResolveAssemblyReference.cache
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.dll
+C:\Users\Eithing\Documents\GitHubVisualStudio\NextLevelCXATJ\EntityF\obj\Debug\EntityF.pdb

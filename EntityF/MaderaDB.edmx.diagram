@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d0072b015df14eb3a25f531cc0d8f62a" Name="Diagram1" ZoomLevel="109">
+      <Diagram DiagramId="d0072b015df14eb3a25f531cc0d8f62a" Name="Diagram1" ZoomLevel="102">
         <EntityTypeShape EntityType="MaderaModel.ACCOUNT" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.ADRESS" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MaderaModel.COMPONENTFAMILY" Width="1.5" PointX="10.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaderaModel.COMPONENTFAMILY" Width="1.875" PointX="10.375" PointY="17.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.COMPONENTS" Width="1.5" PointX="13" PointY="18.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.COMPOSED_TO" Width="1.5" PointX="15.25" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.COVER" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
