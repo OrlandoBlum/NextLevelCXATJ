@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d0072b015df14eb3a25f531cc0d8f62a" Name="Diagram1" ZoomLevel="109">
+      <Diagram DiagramId="d0072b015df14eb3a25f531cc0d8f62a" Name="Diagram1" ZoomLevel="88">
         <EntityTypeShape EntityType="MaderaModel.ACCOUNT" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.ADRESS" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MaderaModel.COMPONENTFAMILY" Width="1.5" PointX="10.75" PointY="17.125" IsExpanded="true" />
