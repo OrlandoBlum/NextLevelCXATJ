@@ -2,7 +2,7 @@
 using System.Linq;
 using EntityF;
 
-namespace DataAcces
+namespace DataAccess
 {
     class CustomerManager
     {

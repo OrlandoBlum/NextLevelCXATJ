@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataAcces
+namespace DataAccess
 {
     public class AccountManager
     {
